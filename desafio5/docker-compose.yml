@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  usuarios:
+    build: ./usuarios
+    container_name: usuarios
+    ports:
+      - "5001:5001"
+
+  pedidos:
+    build: ./pedidos
+    container_name: pedidos
+    ports:
+      - "5002:5002"
+
+  gateway:
+    build: ./gateway
+    container_name: gateway
+    ports:
+      - "5000:5000"
+    depends_on:
+      - usuarios
+      - pedidos
