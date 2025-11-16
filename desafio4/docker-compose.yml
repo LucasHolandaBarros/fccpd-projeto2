@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  microsservico_a:
+    build: ./microsservico_a
+    container_name: microsservico_a
+    ports:
+      - "5000:5000"
+
+  microsservico_b:
+    build: ./microsservico_b
+    container_name: microsservico_b
+    ports:
+      - "5001:5001"
+    depends_on:
+      - microsservico_a
