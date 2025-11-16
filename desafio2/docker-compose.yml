@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: desafio2_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: desafio2
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  reader:
+    image: postgres:15
+    container_name: desafio2_reader
+    depends_on:
+      - db
+    environment:
+      PGPASSWORD: password
+    entrypoint: >
+      bash -c "
+      sleep 5 &&
+      psql -h db -U user -d desafio2 -c 'SELECT * FROM clientes;'"
+      
+volumes:
+  db_data:
