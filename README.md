@@ -19,13 +19,15 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
 
   A network é criada no docker-compose, o server abre a porta 8080 e o client se conecta a ela para estabelecer a conexão. Cada diretório (client e server) possuem uma Dockerfile de configuração para buildar os containers
 
-  <p>
-    Para rodar basta entrar na pasta:
-    ```bash
-      cd desafio1
-    ```
 
-  </p>
+  1. Para rodar basta entrar na pasta:
+  ```bash
+  cd desafio1
+  ```
+  2. E dar compose no docker-compose:
+  ```bash
+  docker-compose up
+  ```
   
 </details>
 <details>
