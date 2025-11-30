@@ -73,15 +73,23 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
   ```bash
   cd desafio2
   ```
-  2. E dar compose down no docker-compose:
+  2. Verificar a presença do volume:
+  ```bash
+  docker volume ls
+  ```
+  3. E dar compose down no docker-compose:
   ```bash
   docker-compose down
   ```
-  3. Subir novamente:
+  4. Verificar a presença do volume novamente:
+  ```bash
+  docker volume ls
+  ```
+  5. Subir novamente:
   ```bash
   docker-compose up -d
   ```
-  4. Testar se os dados realmente persistiram:
+  6. Testar se os dados realmente persistiram:
   ```bash
   docker exec -it desafio2_db psql -U user -d desafio2 -c "SELECT * FROM clientes;"
   ```
