@@ -13,7 +13,7 @@ def usuarios_completos():
         usuarios = response.json()
 
         resultado = [
-            f"Usuário {u['nome']} ativo desde {u['ativo_desde']}"
+            f"Usuario {u['nome']} ativo desde {u['ativo_desde']}"
             for u in usuarios
         ]
         return jsonify(resultado)

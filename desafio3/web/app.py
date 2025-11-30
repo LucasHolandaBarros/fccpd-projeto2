@@ -5,11 +5,9 @@ import os
 
 app = Flask(__name__)
 
-# Redis
 redis_host = os.getenv("REDIS_HOST", "cache")
 r = redis.Redis(host=redis_host, port=6379)
 
-# Postgres
 db_host = os.getenv("DB_HOST", "db")
 conn = psycopg2.connect(
     dbname="mydb",
@@ -20,11 +18,9 @@ conn = psycopg2.connect(
 
 @app.route("/")
 def index():
-    # Teste Redis
     r.incr("visitas")
     visitas = r.get("visitas").decode()
 
-    # Teste DB
     cur = conn.cursor()
     cur.execute("SELECT COUNT(*) FROM produtos;")
     count = cur.fetchone()[0]
