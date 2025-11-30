@@ -57,7 +57,7 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
 
   1. Para rodar basta entrar na pasta:
   ```bash
-  cd desafio1
+  cd desafio2
   ```
   2. E dar compose no docker-compose:
   ```bash
@@ -67,7 +67,7 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
   ```bash
   docker exec -it desafio2_db psql -U user -d desafio2 -c "SELECT * FROM clientes;"
   ```
-  Para testar se os dados se mantiveram:
+  <strong>Para testar se os dados se mantiveram:</strong>
   ##
   1. Para rodar basta entrar na pasta:
   ```bash
