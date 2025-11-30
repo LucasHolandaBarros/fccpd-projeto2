@@ -28,6 +28,15 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
   ```bash
   docker-compose up
   ```
+  3. Para ver os logs dos arquivos:
+  ```bash
+  docker logs <nome_do_container>
+  ```
+  exemplo:
+  ```bash
+  docker logs desafio1_client
+  docker logs desafio1_server
+  ```
   
 </details>
 <details>
