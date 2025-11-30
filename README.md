@@ -73,7 +73,7 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
   ```bash
   cd desafio2
   ```
-  2. Verificar a presença do volume:
+  2. Verificar a presença do volume, procure por <strong>desafio2_db_data</strong>:
   ```bash
   docker volume ls
   ```
