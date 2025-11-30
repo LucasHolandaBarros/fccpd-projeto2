@@ -153,7 +153,12 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
   ```bash
   docker-compose up
   ```
-  3. Para ver os logs dos arquivos:
+  3. Para visualizar no navegador:
+    <ul>
+    <li><strong>microsservico_a:</strong> .../usuarios</li>
+    <li><strong>microsservico_b:</strong> .../usuarios_completos</li>
+    </ul>
+  4. Para ver os logs dos arquivos:
   ```bash
   docker logs <nome_do_container>
   ```
@@ -191,10 +196,20 @@ Abaixo estão as **explicações de cada desafio**, separados em seções, propo
   ```bash
   docker logs <nome_do_container>
   ```
-  exemplo:
+   exemplo:
   ```bash
   docker logs usuarios
   docker logs pedidos
   docker logs gateway
+  ```
+  4. Para acessar no navegador:
+  
+  <strong>Para visualizar os pedidos:</strong>
+  ```bash
+  http://localhost:5002/pedidos
+  ```
+  <strong>Para visualizar os usuarios:</strong>
+  ```bash
+  http://localhost:5001/usuarios
   ```
 </details>
